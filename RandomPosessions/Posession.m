@@ -41,7 +41,7 @@
 
 - (id)init
 {
-    
+    [super init];   
     
 }
 
