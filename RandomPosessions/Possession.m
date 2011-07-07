@@ -6,10 +6,28 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "Posession.h"
+#import "Possession.h"
 
-@implementation Posession
-
+@implementation Possession
+- (id)initWithPosessionName:(NSString *)name
+             valueInDollars:(int)value
+               serialNumber:(NSString *)sNumber
+{
+    [super init];
+    //give the instance var's values
+    [self setPosessionName:name];
+    [self setSerialNumber:sNumber];
+    [self setValueInDollars:value];
+    dateCreated = [[NSDate alloc] init];
+    
+    //ret
+    return self;
+}
+- (id)init
+{
+    [super init]; 
+    return self;
+}
 - (void)setPosessionName:(NSString *) str
 {
     posessionName = str;
@@ -38,11 +56,16 @@
 {
     return dateCreated;
 }
-
-- (id)init
+- (NSString *)description
 {
-    [super init];   
-    
+    NSString *descriptionString = 
+    [[NSString alloc] initWithFormat: @"%@ (%@): Worth $%d, recorded on %@",
+     posessionName,
+     serialNumber,
+     valueInDollars,
+     dateCreated];
+    return descriptionString;
 }
+
 
 @end

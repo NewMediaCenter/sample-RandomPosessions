@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Posession : NSObject
+@interface Possession : NSObject
 {
     NSString *posessionName;
     NSString *serialNumber;
@@ -16,6 +16,7 @@
     NSDate *dateCreated;
     
 }
+- (id)init
 - (void)setPosessionName:(NSString *)str;
 - (NSString *)posessionName;
 
