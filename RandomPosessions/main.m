@@ -26,6 +26,7 @@ int main (int argc, const char * argv[])
 //        NSLog(@"%@", [items objectAtIndex:i]);
 //    }
     
+//yay test
     Possession *p = [[Possession alloc] init];
     // set stuff
     [p setPosessionName:@"Red Sofa"];
