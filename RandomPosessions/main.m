@@ -7,31 +7,33 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Posession.h"
+#import "Possession.h"
 int main (int argc, const char * argv[])
 {
 
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     NSMutableArray *items = [[NSMutableArray alloc] init];
     
-//Adding Items
-    [items addObject:@"One"];
-    [items addObject:@"two"];
-    [items addObject:@"Three"];
+////Adding Items
+//    [items addObject:@"One"];
+//    [items addObject:@"two"];
+//    [items addObject:@"Three"];
+//    
+//// adding items at index 0
+//    [items insertObject:@"Zero" atIndex:0 ];
+//    
+//    for (int i=0; i < [items count]; i++){
+//        NSLog(@"%@", [items objectAtIndex:i]);
+//    }
     
-// adding items at index 0
-    [items insertObject:@"Zero" atIndex:0 ];
-    
-    for (int i=0; i < [items count]; i++){
-        NSLog(@"%@", [items objectAtIndex:i]);
-    }
-    
-    Posession *p = [[Posession alloc] init];
+    Possession *p = [[Possession alloc] init];
     // set stuff
     [p setPosessionName:@"Red Sofa"];
     [p setSerialNumber:@"42"];
     [p setValueInDollars:9001];
     
+    //describe the object
+    NSLog(@"%@", p);
     
     NSLog(@"%@ %@ %@ %d",[p posessionName], [p dateCreated], [p serialNumber], [p valueInDollars]);
     
