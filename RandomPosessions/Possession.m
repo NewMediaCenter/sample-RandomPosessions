@@ -14,19 +14,21 @@
                serialNumber:(NSString *)sNumber
 {
     [super init];
+    if (self){
     //give the instance var's values
     [self setPosessionName:name];
     [self setSerialNumber:sNumber];
     [self setValueInDollars:value];
     dateCreated = [[NSDate alloc] init];
-    
+    }
     //ret
     return self;
 }
 - (id)init
 {
-    [super init]; 
-    return self;
+    return [self initWithPosessionName:@"Posession"
+                        valueInDollars:0
+                          serialNumber:@""];
 }
 - (void)setPosessionName:(NSString *) str
 {

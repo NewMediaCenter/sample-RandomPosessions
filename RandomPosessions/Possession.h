@@ -16,7 +16,11 @@
     NSDate *dateCreated;
     
 }
-- (id)init
+id(
+- (id)initWithPosessionName:(NSString *)name
+             valueInDollars:(int)value
+               serialNumber:(NSString *)sNumber;
+
 - (void)setPosessionName:(NSString *)str;
 - (NSString *)posessionName;
 
