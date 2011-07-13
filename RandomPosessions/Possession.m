@@ -24,6 +24,9 @@
     //ret
     return self;
 }
+
+- (id)randomPosession
+ 
 - (id)init
 {
     return [self initWithPosessionName:@"Posession"
