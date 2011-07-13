@@ -26,7 +26,17 @@
 }
 
 - (id)randomPosession
- 
+{
+    //Creation of the array
+    NSArray *RandomAdjectiveList = [NSArray arrayWithObjects:@"Fluffy",
+                                    @"Shiny",
+                                    @"Rusty", nil;]
+    //creation of an array of nouns
+    NSArray *RandomNounList = [NSArray arrayWithObjects:@"Bear",
+                               @"Spork",
+                               @"Mac", nil];
+    
+}
 - (id)init
 {
     return [self initWithPosessionName:@"Posession"
