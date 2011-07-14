@@ -9,7 +9,7 @@
 #import "Possession.h"
 
 @implementation Possession
-- (id)initWithPosessionName:(NSString *)name
+- (id)initWithPossessionName:(NSString *)name
              valueInDollars:(int)value
                serialNumber:(NSString *)sNumber
 {
@@ -25,7 +25,7 @@
     return self;
 }
 
-+ (id)randomPosession
++ (id)randomPossession
 {
     //Creation of the array
     NSArray *randomAdjectiveList = [NSArray arrayWithObjects:@"Fluffy",
@@ -51,7 +51,7 @@
                                     '0' + rand() % 10];
     //Once again, ignore the memory problems with this method
     Possession *newPossession =
-    [[self alloc] initWithPosessionName:randomName
+    [[self alloc] initWithPossessionName:randomName
                          valueInDollars:randomValue
                            serialNumber:randomSerialNumber];
     return newPossession;
@@ -59,7 +59,7 @@
 }
 - (id)init
 {
-    return [self initWithPosessionName:@"Posession"
+    return [self initWithPossessionName:@"Posession"
                         valueInDollars:0
                           serialNumber:@""];
 }

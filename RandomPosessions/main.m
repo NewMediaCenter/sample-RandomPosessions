@@ -28,15 +28,16 @@ int main (int argc, const char * argv[])
     
 //yay test
     for (int i=0; i < 10; i++) {
-        Possession *p = [Possession randomPosession];
+        Possession *p = [Possession randomPossession];
         [items addObject:p];
+        NSLog(@"%@ %@ %@ %d",[p posessionName], [p dateCreated], [p serialNumber], [p valueInDollars]);
+
     }
     
     //describe the object
-    NSLog(@"%@", p);
+    //NSLog(@"%@", p);
     
-    NSLog(@"%@ %@ %@ %d",[p posessionName], [p dateCreated], [p serialNumber], [p valueInDollars]);
-    
+       
     
     
     //unload
