@@ -27,11 +27,10 @@ int main (int argc, const char * argv[])
 //    }
     
 //yay test
-    Possession *p = [[Possession alloc] init];
-    // set stuff
-    [p setPosessionName:@"Red Sofa"];
-    [p setSerialNumber:@"42"];
-    [p setValueInDollars:9001];
+    for (int i=0; i < 10; i++) {
+        Possession *p = [Possession randomPosession];
+        [items addObject:p];
+    }
     
     //describe the object
     NSLog(@"%@", p);

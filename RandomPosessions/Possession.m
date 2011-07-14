@@ -25,16 +25,36 @@
     return self;
 }
 
-- (id)randomPosession
++ (id)randomPosession
 {
     //Creation of the array
-    NSArray *RandomAdjectiveList = [NSArray arrayWithObjects:@"Fluffy",
+    NSArray *randomAdjectiveList = [NSArray arrayWithObjects:@"Fluffy",
                                     @"Shiny",
-                                    @"Rusty", nil;]
+                                    @"Rusty", nil];
     //creation of an array of nouns
-    NSArray *RandomNounList = [NSArray arrayWithObjects:@"Bear",
+    NSArray *randomNounList = [NSArray arrayWithObjects:@"Bear",
                                @"Spork",
                                @"Mac", nil];
+    //gets index of randoms adj/noun from lists
+    int adjectiveIndex = rand() % [randomAdjectiveList count];
+    int nounIndex = rand() % [randomNounList count];
+    
+    NSString *randomName = [NSString stringWithFormat:@"%@ %@",
+                            [randomAdjectiveList objectAtIndex:adjectiveIndex],
+                            [randomNounList objectAtIndex:nounIndex]];
+    int randomValue = rand() % 100;
+    NSString *randomSerialNumber = [NSString stringWithFormat:@"%c%c%c%c%c",
+                                    '0' + rand() % 10,
+                                    'A' + rand() % 26,
+                                    '0' + rand() % 10,
+                                    'A' + rand() % 26,
+                                    '0' + rand() % 10];
+    //Once again, ignore the memory problems with this method
+    Possession *newPossession =
+    [[self alloc] initWithPosessionName:randomName
+                         valueInDollars:randomValue
+                           serialNumber:randomSerialNumber];
+    return newPossession;
     
 }
 - (id)init
